@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-border { border: 1px dotted #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-50 p-4 md:p-10">
+
+    <div class="max-w-4xl mx-auto border-2 border-dashed border-blue-400 p-6 mb-6">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 border border-gray-200">
+                <p class="text-gray-500 text-sm">Total</p>
+                <p class="text-2xl font-bold">8</p>
+            </div>
+            <div class="p-4 border border-gray-200">
+                <p class="text-gray-500 text-sm">Interview</p>
+                <p class="text-2xl font-bold text-green-600">0</p>
+            </div>
+            <div class="p-4 border border-gray-200">
+                <p class="text-gray-500 text-sm">Rejected</p>
+                <p class="text-2xl font-bold text-red-600">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto border-2 border-dashed border-blue-400 p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold">Available Jobs</h2>
+            <span class="text-sm font-semibold">8 jobs</span>
+        </div>
+
+        <div class="flex gap-2 mb-6">
+            <button class="bg-blue-600 text-white px-6 py-1.5 rounded-sm">All</button>
+            <button class="bg-gray-200 px-6 py-1.5 rounded-sm">Interview</button>
+            <button class="bg-gray-200 px-6 py-1.5 rounded-sm">Rejected</button>
+        </div>
+
+        <div class="bg-white p-6 border border-gray-200 mb-4 shadow-sm">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="font-bold text-lg">Mobile First Corp</h3>
+                    <p class="text-sm text-gray-700">React Native Developer</p>
+                    <p class="text-xs text-gray-500 mt-2">Remote • Full-time • $130,000 - $175,000</p>
+                </div>
+                <button class="text-gray-400">🗑</button>
+            </div>
+            <div class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-0.5 inline-block my-3 border border-blue-200">NOT APPLIED</div>
+            <p class="text-sm text-gray-600 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <div class="flex gap-3">
+                <button class="border border-green-500 text-green-600 px-4 py-1 text-xs font-bold uppercase">Interview</button>
+                <button class="border border-red-500 text-red-600 px-4 py-1 text-xs font-bold uppercase">Rejected</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
