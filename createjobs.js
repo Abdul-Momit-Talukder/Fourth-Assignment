@@ -34,19 +34,21 @@ function createJob(job) {
     const btnRejected = card.querySelector(".btn-rejected");
 
     //functon for create and count Interview and rejected part
-    btnInterview.addEventListener("click", function () {
-        interviewEmpty.classList.add("hidden");
-        btnInterview.remove();
-        btnRejected.remove();
-        status.innerText = "INTERVIEW";
-        status.className =
-            "status bg-green-100 text-green-700 p-2 rounded-md inline-block";
-
-        const interviewCard = card.cloneNode(true);
-        interviewCard.querySelector(".delete-btn").remove();
-        interviewContainer.appendChild(interviewCard);
-        interviewCount.innerText = interviewContainer.children.length;
-    });
+   // Example for the Interview button
+btnInterview.addEventListener("click", function () {
+    // A. Update the UI look
+    status.innerText = "INTERVIEW";
+    status.className = "status bg-green-100 text-green-700 p-2 rounded-md inline-block";
+    
+    // B. Move the element: appendChild automatically removes it from its current parent
+    interviewContainer.appendChild(card);
+    
+    // C. Update your global counts
+    updateJobCount(); 
+    
+    // D. Handle "Empty" messages
+    checkEmptyStates(); 
+});
     btnRejected.addEventListener("click", function () {
         rejectedEmpty.classList.add("hidden");
         btnInterview.remove();
